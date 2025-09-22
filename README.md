@@ -47,7 +47,7 @@ You can read the startup time from the application log. It will be something lik
 2024-06-27T11:56:59.475+01:00  INFO 37043 --- [           main] m.escoffier.spring.todo.TodoApplication  : Started TodoApplication in 2.779 seconds (process running for 3.247)
 ```
 
-When measuring the footprint of a Java application, you should measure Resident Set Size (RSS) and not the JVM heap size which is only a small part of the overall problem. The JVM not only allocates native memory for heap (-Xms, -Xmx) but also structures required by the jvm to run your application, such as compiled code and class metadata.
+When measuring the footprint of a Java application, you should measure Resident Set Size (RSS) and not the JVM heap size which is only a small part of the overall memory consumption. The JVM not only allocates native memory for heap (-Xms, -Xmx) but also structures required by the jvm to run your application, such as compiled code and class metadata.
 
 On MacOS, to measure the RSS, run
 
